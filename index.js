@@ -9,3 +9,5 @@ for (let i = 0; i < imgs.length; i++) {
         image.classList.toggle('full')
     });
 }
+
+console.log('This website was made by Hilmar Lemcke: https://portfolio-hilmar.netlify.app/');

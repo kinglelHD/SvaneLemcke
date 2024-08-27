@@ -144,6 +144,20 @@ main {
     font-size: 2rem;
 }
 
+#contact {
+    width: 60%;
+    margin: 0 auto;
+    background-color: var(--color-2);
+    padding: 2em;
+    border-radius: 8px;
+    color: white;
+}
+
+#contact div {
+    display: flex;
+    justify-content: space-between;
+}
+
 footer {
     background-color: var(--color-2);
     padding: 2em;
@@ -160,6 +174,9 @@ footer {
     }
     .img {
         grid-column: span 2;
+    }
+    #contact {
+        width: 100%;
     }
 }
 
