@@ -29,7 +29,7 @@ body {
 }
 
 header {
-    background-image: url(assets/test/10.jpg);;
+    background-image: url(assets/Sonnenuntergang.jpg);
     background-size: cover;
     background-position: center;
     color: white;
@@ -37,6 +37,7 @@ header {
 
 h1 {
     text-align: center;
+    backdrop-filter: blur(4px);
     font-size: 4rem;
     padding: 2em 1em;
 }
@@ -67,9 +68,9 @@ main {
 #gallery {
     display: grid;
     gap: .8em;
-    grid-auto-rows: 240px;
-    grid-auto-columns: 240px;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-auto-rows: 16rem;
+    grid-auto-columns: 16rem;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
     grid-auto-flow: dense;
 }
 
