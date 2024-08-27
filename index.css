@@ -10,7 +10,7 @@
     font-size: calc(1vw + 8px);
     --color-1: rgb(255, 228, 196);
     --color-2: rgb(54, 70, 82);
-    --text-color: white;
+    --text-color: var(--color-2);
 }
 
 img {
@@ -21,6 +21,7 @@ img {
 
 html {
     scroll-behavior: smooth;
+    scroll-padding: 4rem;
 }
 
 body {
