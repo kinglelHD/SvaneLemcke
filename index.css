@@ -51,15 +51,20 @@ nav {
     justify-content: space-evenly;
 }
 
-nav a{
+nav a {
     color: inherit;
     font-weight: bold;
     text-decoration: none;
     background-color: rgba(255, 228, 196, .5);
     text-align: center;
     width: 100%;
-    outline: 1px var(--color-2) solid;
+    border: 1px var(--color-2) solid;
+    outline: none;
     padding: 2em 1em;
+}
+
+nav a:hover, nav a:focus {
+    border-color: white;
 }
 
 main {
