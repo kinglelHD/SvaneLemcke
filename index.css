@@ -22,6 +22,10 @@ img {
 html {
     scroll-behavior: smooth;
     scroll-padding: 4rem;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 body {
@@ -54,7 +58,7 @@ nav a{
     background-color: rgba(255, 228, 196, .5);
     text-align: center;
     width: 100%;
-    outline: 1px var(--color-1) solid;
+    outline: 1px var(--color-2) solid;
     padding: 2em 1em;
 }
 
@@ -91,7 +95,7 @@ main {
 #gallery .img::after {
     content: attr(description);
     position: absolute;
-    bottom: 0;
+    bottom: calc(-30% - 2em);
     left: 0;
     right: 0;
     padding: 1em;
@@ -99,16 +103,12 @@ main {
     color: white;
     font-size: 1rem;
     background-color: rgba(69, 69, 69, .5);
-    transform: translateY(3rem);
-    visibility: hidden;
-    transition: transform 250ms;
+    transition: bottom 250ms;
     max-height: 30%;
-    overflow: hidden;
 }
 
 #gallery .img:hover::after{
-    visibility: visible;
-    transform: translateY(0);
+    bottom: 0;
 }
 
 .full {
@@ -121,14 +121,14 @@ main {
     top: 0;
     left: 0;
     z-index: 1;
-    overflow: visible;
     background-color: rgba(69, 69, 69, .5);
     backdrop-filter: blur(8px);
     border-radius: 0;
 }
 
 .full::before {
-    content: attr(location) ' ' url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><path fill="white" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"/></svg>');
+    color: white;
+    content: attr(location) ' ' url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="white" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"/></svg>');
     position: absolute;
     top: 1rem;
 }
@@ -144,8 +144,7 @@ main {
 }
 
 #gallery div.img.full::after {
-    visibility: visible;
-    transform: translateY(0);
+    bottom: 0;
     background-color: transparent;
     z-index: 2;
     font-size: 2rem;
